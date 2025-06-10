@@ -55,7 +55,8 @@ function Login() {
     }
 
     return (
-        <div className="myform">
+      <div className="auth">
+		  <div className="myform">
             <h1></h1>
             <div className="myform1">
                 <form onSubmit={HandleSub} className="form">
@@ -96,15 +97,16 @@ function Login() {
                         />
                     </div>
                     
-                    <div className="cloudflaire">
+                    {/* <div className="cloudflaire">
                         <input type="checkbox" />
                         <label htmlFor="">vérifier</label>
-                    </div>
+                    </div> */}
                     <button className="btnLogin">{signup ? 'Sign Up' : 'Login' }</button>
                     <div><a href="#" onClick={OnclickSignUp}>{signup?"my account":"new account"}</a></div>
                 </form>
             </div>
         </div>
+	  </div>
     );
 }
 
