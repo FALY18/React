@@ -1,4 +1,4 @@
-#  Application de Gestion Logistique - WBS
+#  Application de Gestion Logistique - WBS -en cours...
 
 ##  Description
 
@@ -23,7 +23,7 @@ Elle comprend :
 - **Suivi des emprunts** : Gérer les emprunts et les retours de matériels.
 - **Notifications** : Alertes automatiques pour les matériels non retournés.
 - **Statistiques graphiques** : Visualiser les données avec Recharts.
-- **Responsive** : Adaptation automatique à toutes les tailles d'écran.
+- **Responsive en cours...** : Adaptation automatique à toutes les tailles d'écran.
 - **Connexion sécurisée** : Authentification avec contrôle des erreurs et animations de chargement.
 
 ---
@@ -66,6 +66,6 @@ cd ton-projet
 # Installer les dépendances
 npm install
 
-# Lancer l'application
+# Lancer xampp d'abord si vous utilsez et l'application partie backend viq
 npm start
 
