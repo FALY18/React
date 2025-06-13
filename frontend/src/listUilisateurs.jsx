@@ -52,7 +52,7 @@ const handleDelete = async (idUs) =>{
             <h2 className="list">Listes des utilisateurs</h2>
            <div className="link"> <Link to="/addUtilisateur"><BsPersonAdd/> ajouter</Link></div>
             <div className="usersTable">
-                <table>
+                <table className="table">
                     <thead>
                         <tr>
                             <th>Numero</th>
@@ -64,23 +64,26 @@ const handleDelete = async (idUs) =>{
                         </tr>
                     </thead>
 
-                    <tbody>
-                        {utilisateurs.map((utilisateur) => 
-                           ( <tr key={utilisateur.idUs}>
-                                <td>{utilisateur.idUs}</td>
-                                <td>{utilisateur.nomUs}</td>
-                                <td>{utilisateur.prenomUs}</td>
-                                <td>{utilisateur.foncUs}</td>
-                                <td>{utilisateur.emailUs}</td>
-                                <td >
-                                    <button onClick={() =>handleEdit(utilisateur)}> <BsPencil className="icon_header" style={{color:"black",background:"gray",color:'blue',width:"30px ",height:"20px"}}/> </button> 
-                                </td>
-                                <td >
-                                     <button onClick={() =>handleDelete(utilisateur.idUs)}> <BsTrash className="icon_header" style={{color:"black",background:"gray",color:'crimson', width:"30px ",height:"20px"}} /></button>
-                                </td>
-                            </tr>)
-                        )}
-                    </tbody>
+                  <tbody>
+  {utilisateurs.map((utilisateur) => (
+    <tr key={utilisateur.idUs}>
+      <td data-label="Numero">{utilisateur.idUs}</td>
+      <td data-label="Nom">{utilisateur.nomUs}</td>
+      <td data-label="Prénoms">{utilisateur.prenomUs}</td>
+      <td data-label="Fonction">{utilisateur.foncUs}</td>
+      {utilisateur.emailUs && (
+        <td data-label="Email">{utilisateur.emailUs}</td>
+      )}
+      <td data-label="Éditer">
+        <button onClick={() => handleEdit(utilisateur)}><BsPencil /></button>
+      </td>
+      <td data-label="Supprimer">
+        <button onClick={() => handleDelete(utilisateur.idUs)}><BsTrash /></button>
+      </td>
+    </tr>
+  ))}
+</tbody>
+
                 </table>
             </div>
         </div>
